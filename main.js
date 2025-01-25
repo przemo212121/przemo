@@ -10,8 +10,13 @@ let krzak =["slon","trol"];
 console.log(krzak.length);
 
 console.log("Przemo");
-
-let zmienna = rl.question("podaj zmienna\n", input1=>
+let dysk = ["dolina","krzy"];
+console.log(dysk)
+dysk.push("pies")
+console.log(dysk)
+dysk.splice(1,2)
+console.log(dysk)
+let zmienna = rl.question("podaj zmienna\n", (input1)=>
 {
 
     let krzak =["slon","trol"];
@@ -21,14 +26,25 @@ console.log("wprowadzono zmienna\n",  input1)
  {
     console.log("jestes fanem barcy")
  }
+ if(krzak[1]!==input1)
+ {
+    console.log("przejdz do warunku 3")
+ }
  else
  {
-    return;
+    console.log("bye");
  }
-    console.log("Koniec");
+    
 
     rl.close();  // Zamykamy interfejs po zakończeniu
 
+});
+
+rl.on('close',()=>
+{
+    
+    console.log("dalszy ciag programu")
+    return;
 });
 
 
